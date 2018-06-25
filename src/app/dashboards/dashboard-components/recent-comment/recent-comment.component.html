@@ -1,0 +1,22 @@
+<div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Aniversariantes do Dia</h4>
+         </div>   
+        <div class="card-body">
+                <div class="container">
+                        <div [hidden]="controle" class="alert alert-info" role="alert">
+                            Nenhum Aniversariante hoje!
+                        </div>
+                    </div>
+            <div class="table-responsive" [hidden]="!controle">
+                <table class="table table-hover earning-box">
+                    
+                    <tbody>
+                        <tr *ngFor="let pac of list; let i = index">
+                            <td>{{pac.nome}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>

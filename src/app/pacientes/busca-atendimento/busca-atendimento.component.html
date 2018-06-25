@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+          <div class="card-body">
+              
+              <div class="row">                    
+                      <div class="col">
+                              <label class="control-label m-t-20">Paciente</label>
+                          <div class="input-group mb-3">
+                              <input (keyup.enter)="buscaLocal()" type="text" [(ngModel)]="searchString" class="form-control" placeholder="Qual nome do seu cliente?" aria-describedby="basic-addon1">
+                              <div class="input-group-append">
+                                  <button (click)="buscaLocal()" class="btn btn-info" type="button">Buscar</button>
+                              </div>
+                          </div>
+                      </div>
+               </div>
+              <div [hidden]="!controle">
+                  <div class="table-responsive">
+                      <table class="table table-hover earning-box">
+                          <thead>
+                              <tr>
+                                  <th>Nome</th>
+                                  <th>Data Nasc.</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr *ngFor="let pac of listaPac; let i = index">
+                                  
+                                  <td><button type="button" (click)="setPacKey(pac)" class="btn btn-outline-info">{{pac.nome}}</button> </td>
+                                  
+                                  <td>{{pac.dt_nasc}}</td>
+                                                       
+                              </tr>                    
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+        </div>
+              
+        </div>
+    </div>
+  </div>

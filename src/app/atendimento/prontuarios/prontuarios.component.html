@@ -1,0 +1,30 @@
+<br>
+<button [routerLink]="['/servicos/avaliacoes']" class="btn btn-info waves-effect waves-light m-t-10" type="button">Nova Avaliação</button>
+              <div class="container">
+                <div [hidden]="controle" class="alert alert-info" role="alert">
+                    Nenhuma Avaliação!
+                </div>
+             </div>
+             
+              <div class="table-responsive"  [hidden]="!controle" > 
+                <table class="table table-hover earning-box">
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Avaliação</th>                                                                                   
+                            <th></th>                         
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let pac of recibos; let i = index">
+                            
+                            <td>{{pac.dt_cad}}</td>
+                            <td>{{pac.nome_ficha}}</td>                                                   
+                            <td><button (click)="redirect(pac)" type="button" class="btn btn-outline-info"><i class="fa fa-search"></i></button></td>
+                                                
+                        </tr>                    
+                    </tbody>
+                </table>
+              </div>
+              
+              

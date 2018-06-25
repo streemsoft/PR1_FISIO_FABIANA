@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-12">
+      <div class="card">
+          <div class="card-body">
+             
+              <div class="container">
+                  <div [hidden]="controle" class="alert alert-info" role="alert">
+                      Nenhuma Boleto!
+                  </div>
+              </div>
+                <div class="table-responsive"  [hidden]="!controle" > 
+                  <table class="table table-hover earning-box">
+                      <thead>
+                          <tr>
+                              <th>Referência</th>
+                              <th>Vencimento</th> 
+                              <th>Situação</th> 
+                              <th>Valor</th>                                                                                                                                                                                                                                                                                                                                                                                                                                   
+                              <th></th>                         
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr *ngFor="let pac of recibos; let i = index">
+                              
+                              <td>{{pac.desc}}</td>
+                              <td>{{pac.venci}}</td> 
+                              <td>{{pac.situacao}}</td>                                                   
+                              <td>{{pac.valor}}</td>                                                                                                                                   
+                              <td><a href="{{pac.url}}" target="_blank"><i class="fa fa-print"></i></a></td>
+                                                  
+                          </tr>                    
+                      </tbody>
+                  </table>
+                </div>              
+              
+          </div>
+      </div>
+  </div>
+</div>

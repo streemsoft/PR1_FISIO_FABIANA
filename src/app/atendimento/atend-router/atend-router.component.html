@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+          <div class="card-body">
+
+                <div class="container">
+                    <label class="control-label m-t-20">Paciente: {{nome}}</label>
+                            
+                      
+                     </div>
+                     <br>
+              <ul class="nav nav-tabs">
+                  <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active" [routerLink]="['/atendimento/consulta/anamnese']" >Anamnese</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active" [routerLink]="['/atendimento/consulta/prontuario']">Prontuário</a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" routerLinkActive="active" [routerLink]="['/atendimento/consulta/sessoes']">Sessões</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" routerLinkActive="active" [routerLink]="['/atendimento/consulta/faturas']">Faturas</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" routerLinkActive="active" [routerLink]="['/atendimento/consulta/recibos']">Recibos</a>
+                  </li>
+                </ul>
+                <router-outlet></router-outlet>
+          </div>              
+        </div>
+    </div>
+</div>

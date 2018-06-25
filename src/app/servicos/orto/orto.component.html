@@ -1,0 +1,584 @@
+<div class="row">
+  <div class="col-12">
+      <div class="card">
+                <div class="card card-body">
+<!--Linha-->
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+       <div class="form-group">
+           <label>Queixa Principal</label>
+           <textarea rows="4" class="form-control" type="text" [(ngModel)]="ficha.perg1" ></textarea>
+        </div>
+    </div>
+    </div>
+  </div>
+
+<!--Fim-->
+<!--Linha-->
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <div class="form-group">
+          <label>HMA</label>
+          <textarea rows="4" class="form-control" type="text" [(ngModel)]="ficha.perg2a" ></textarea>
+       </div>
+   </div>
+  </div>
+  </div>  
+<!--Fim-->
+<!--Linha-->
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <div class="form-group">
+          <label>HMP</label>
+          <textarea rows="4" class="form-control" type="text" [(ngModel)]="ficha.perg3a" ></textarea>
+       </div>
+   </div>
+  </div>
+</div>
+<!--Fim-->
+<!--Linha-->
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <div class="form-group">
+          <label>Sinais Vitais</label>
+          <textarea rows="3" class="form-control" type="text" [(ngModel)]="ficha.perg4a" ></textarea>
+       </div>
+   </div>
+  </div>
+</div>
+<!--Fim-->
+<!--Linha-->
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <div class="form-group">
+          <label>Cabeça</label>
+          <div class="form-check">
+              <input class="form-check-input" [(ngModel)]="ficha.perg5" type="radio" name="5" id="5" value="Alinhada" checked>
+              <label class="form-check-label" for="5">
+                Alinhada
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" [(ngModel)]="ficha.perg5" name="5" id="5a" value="Rodada">
+              <label class="form-check-label" for="5a">
+                Rodada
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" [(ngModel)]="ficha.perg5" name="5" id="5b" value="Inclinada">
+              <label class="form-check-label" for="5b">
+                Inclinada
+              </label>
+            </div>
+      </div>
+    </div>
+    <div class="col-sm">
+    <div class="form-group">
+      <label>Ombro</label>
+      <div class="form-check">
+          <input class="form-check-input" [(ngModel)]="ficha.perg5a" type="radio" name="5q" id="5q" value="Alinhado" checked>
+          <label class="form-check-label" for="5q">
+            Alinhado
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" [(ngModel)]="ficha.perg5a" name="5q" id="5aw" value="Elevado D/E">
+          <label class="form-check-label" for="5aw">
+            Elevado D/E
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" [(ngModel)]="ficha.perg5a" name="5q" id="5e" value="Deprimido D/E">
+          <label class="form-check-label" for="5e">
+            Deprimido D/E
+          </label>
+        </div>
+      </div>
+  </div>
+</div>
+  </div>
+<!--Fim-->
+<!--Linha-->
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <div class="form-group">
+          <label>Clavícula</label>
+          <div class="form-check">
+              <input class="form-check-input" [(ngModel)]="ficha.perg6" type="radio" name="6" id="6" value="Alinhada" checked>
+              <label class="form-check-label" for="6">
+                Alinhada
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" [(ngModel)]="ficha.perg6" name="6" id="6a" value="Elevada D/E">
+              <label class="form-check-label" for="6a">
+                Elevada D/E
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" [(ngModel)]="ficha.perg6" name="6" id="6b" value="Saliente D/E">
+              <label class="form-check-label" for="6b">
+                Saliente D/E
+              </label>
+            </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="form-group">
+        <label>EIAS</label>
+        <div class="form-check">
+            <input class="form-check-input" [(ngModel)]="ficha.perg19" type="radio" name="6q" id="6q" value="Alinhado" checked>
+            <label class="form-check-label" for="6q">
+              Alinhado
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" [(ngModel)]="ficha.perg19" name="6q" id="6aw" value="Elevado D/E">
+            <label class="form-check-label" for="6aw">
+              Elevado D/E
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" [(ngModel)]="ficha.perg19" name="6q" id="6e" value="Deprimido D/E">
+            <label class="form-check-label" for="6e">
+              Deprimido D/E
+            </label>
+          </div>
+    </div>
+   </div>
+  </div>
+</div>
+<!--Fim-->
+<!--Linha-->
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <div class="form-group">
+          <label>Cotovelo</label>
+          <div class="form-check">
+              <input class="form-check-input" [(ngModel)]="ficha.perg7" type="radio" name="7" id="7" value="Alinhado" checked>
+              <label class="form-check-label" for="7">
+                Alinhado
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" [(ngModel)]="ficha.perg7" name="7" id="7a" value="Valgo D/E">
+              <label class="form-check-label" for="7a">
+                Valgo D/E
+              </label>
+            </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="form-group">
+        <label>Antebraço</label>
+        <div class="form-check">
+            <input class="form-check-input" [(ngModel)]="ficha.perg7a" type="radio" name="7q" id="7q" value="Neutros" checked>
+            <label class="form-check-label" for="7q">
+              Neutros
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" [(ngModel)]="ficha.perg7a" name="7q" id="7aw" value="Pronados D/E">
+            <label class="form-check-label" for="7aw">
+              Pronados D/E
+            </label>
+          </div>
+    </div>
+   </div>
+  </div>
+</div>
+<!--Fim-->
+<!--Linha-->
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <div class="form-group">
+          <label>EIAS</label>
+          <div class="form-check">
+              <input class="form-check-input" [(ngModel)]="ficha.perg8" type="radio" name="8" id="8" value="Alinhada" checked>
+              <label class="form-check-label" for="8">
+                Alinhada
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" [(ngModel)]="ficha.perg8" name="8" id="8a" value="Mais baixa D/E">
+              <label class="form-check-label" for="8a">
+                Mais baixa D/E
+              </label>
+            </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="form-group">
+        <label>Joelhos</label>
+        <div class="form-check">
+            <input class="form-check-input" [(ngModel)]="ficha.perg8a" type="radio" name="8q" id="8q" value="Alinhados" checked>
+            <label class="form-check-label" for="8q">
+              Alinhados
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" [(ngModel)]="ficha.perg8a" name="8q" id="8aw" value="Valgos">
+            <label class="form-check-label" for="8aw">
+              Valgos
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" [(ngModel)]="ficha.perg8a" name="8q" id="8e" value="Varos">
+            <label class="form-check-label" for="8e">
+              Varos
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" [(ngModel)]="ficha.perg8a" name="8q" id="8r" value="R. Medial">
+            <label class="form-check-label" for="8r">
+              R. Medial
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" [(ngModel)]="ficha.perg8a" name="8q" id="8t" value="R. Lateral">
+            <label class="form-check-label" for="8t">
+              R. Lateral
+            </label>
+          </div>
+    </div>
+   </div>
+  </div>
+</div>
+<!--Fim-->
+<!--Linha-->
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <div class="form-group">
+          <label>Patela</label>
+          <div class="form-check">
+              <input class="form-check-input" [(ngModel)]="ficha.perg9" type="radio" name="9" id="9" value="Alinhadas" checked>
+              <label class="form-check-label" for="9">
+                Alinhadas
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" [(ngModel)]="ficha.perg9" name="9" id="9a" value="Lateralizadas">
+              <label class="form-check-label" for="9a">
+                Lateralizadas D/E
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" [(ngModel)]="ficha.perg9" name="9" id="9c" value="Medializadas">
+              <label class="form-check-label" for="9c">
+                Medializadas D/E
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" [(ngModel)]="ficha.perg9" name="9" id="9g" value="Elevada">
+              <label class="form-check-label" for="9g">
+                Elevada D/E
+              </label>
+            </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="form-group">
+        <label>Pé</label>
+        <div class="form-check">
+            <input class="form-check-input" [(ngModel)]="ficha.perg9a" type="radio" name="9qa" id="7qa" value="Alinhados" checked>
+            <label class="form-check-label" for="7qa">
+              Alinhados
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" [(ngModel)]="ficha.perg9a" name="9qa" id="7awa" value="Valgo D/E">
+            <label class="form-check-label" for="7awa">
+              Valgo D/E
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" [(ngModel)]="ficha.perg9a" name="9qa" id="7aya" value="Varos D/E">
+            <label class="form-check-label" for="7aya">
+              Varos D/E
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" [(ngModel)]="ficha.perg9a" name="9qa" id="9aza" value="Plano">
+            <label class="form-check-label" for="9aza">
+             Plano
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" [(ngModel)]="ficha.perg9a" name="9qa" id="7axa" value="Cavo">
+            <label class="form-check-label" for="7axa">
+              Cavo
+            </label>
+          </div>
+    </div>
+   </div>
+  </div>
+</div>
+<!--Fim-->
+<!--Linha-->
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <div class="form-group">
+          <label>Tornozelo</label>
+          <div class="form-check">
+              <input class="form-check-input" [(ngModel)]="ficha.perg10" type="radio" name="10" id="10" value="Alinhados" checked>
+              <label class="form-check-label" for="10">
+                Alinhados
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" [(ngModel)]="ficha.perg10" name="10" id="10a" value="Valgo">
+              <label class="form-check-label" for="10a">
+                Valgo D/E
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" [(ngModel)]="ficha.perg10" name="10" id="10c" value="Varo">
+              <label class="form-check-label" for="10c">
+                Varo D/E
+              </label>
+            </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="form-group">
+        <label>Coluna Cervical</label>
+        <div class="form-check">
+            <input class="form-check-input" [(ngModel)]="ficha.perg10a" type="radio" name="10q" id="10q" value="Retificada" checked>
+            <label class="form-check-label" for="10q">
+              Retificada
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" [(ngModel)]="ficha.perg10a" name="10q" id="10aw" value="Normal">
+            <label class="form-check-label" for="10aw">
+              Normal
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" [(ngModel)]="ficha.perg10a" name="10q" id="10ay" value="Hiperlordose">
+            <label class="form-check-label" for="10ay">
+              Hiperlordose
+            </label>
+          </div>
+    </div>
+   </div>
+  </div>
+</div>
+<!--Fim-->
+<!--Linha-->
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <div class="form-group">
+          <label>Coluna Torácica</label>
+          <div class="form-check">
+              <input class="form-check-input" [(ngModel)]="ficha.perg11" type="radio" name="11" id="11" value="Retificada" checked>
+              <label class="form-check-label" for="11">
+                Retificada
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" [(ngModel)]="ficha.perg11" name="11" id="11a" value="Normal">
+              <label class="form-check-label" for="11a">
+                Normal
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" [(ngModel)]="ficha.perg11" name="11" id="11c" value="Hipercifose">
+              <label class="form-check-label" for="11c">
+                Hipercifose
+              </label>
+            </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="form-group">
+        <label>Coluna Lombar</label>
+        <div class="form-check">
+            <input class="form-check-input" [(ngModel)]="ficha.perg11a" type="radio" name="11q" id="11q" value="Retificada" checked>
+            <label class="form-check-label" for="11q">
+              Retificada
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" [(ngModel)]="ficha.perg11a" name="11q" id="11aw" value="Normal">
+            <label class="form-check-label" for="11aw">
+              Normal
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" [(ngModel)]="ficha.perg11a" name="11q" id="11e" value="Deprimido D/E">
+            <label class="form-check-label" for="11e">
+              Hiperlordose
+            </label>
+          </div>
+    </div>
+   </div>
+  </div>
+</div>
+<!--Fim-->
+<!--Linha-->
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <div class="form-group">
+        <label>Tipo de Marcha</label>
+        <textarea rows="3" class="form-control" type="text" [(ngModel)]="ficha.perg12" ></textarea>
+     </div>
+    </div>
+    <div class="col-sm">
+      <div class="form-group">
+          <label>Palpação</label>
+          <textarea rows="3" class="form-control" type="text" [(ngModel)]="ficha.perg12a" ></textarea>
+       </div>
+   </div>
+  </div>
+</div>
+<!--Fim-->
+<!--Linha-->
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <div class="form-group">
+        <label>Amplitude Articular</label>
+        <textarea rows="3" class="form-control" type="text" [(ngModel)]="ficha.perg13" ></textarea>
+     </div>
+    </div>
+    <div class="col-sm">
+      <div class="form-group">
+          <label>Goniometria</label>
+          <textarea rows="3" class="form-control" type="text" [(ngModel)]="ficha.perg13a" ></textarea>
+       </div>
+   </div>
+  </div>
+</div>
+<!--Fim-->
+<!--Linha-->
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <div class="form-group">
+        <label>Perimetria</label>
+        <textarea rows="3" class="form-control" type="text" [(ngModel)]="ficha.perg14" ></textarea>
+     </div>
+    </div>
+    <div class="col-sm">
+      <div class="form-group">
+          <label>Teste de Retração Muscular</label>
+          <textarea rows="3" class="form-control" type="text" [(ngModel)]="ficha.perg14a" ></textarea>
+       </div>
+   </div>
+  </div>
+</div>
+<!--Fim-->
+<!--Linha-->
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <div class="form-group">
+        <label>Teste de Força Muscular</label>
+        <textarea class="form-control" [(ngModel)]="ficha.perg1a" rows="3"></textarea>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="form-group">
+          <label>Testes Especiais</label>
+          <textarea class="form-control" [(ngModel)]="ficha.perg2" rows="3"></textarea>
+       </div>
+   </div>
+  </div>
+</div>
+<!--Fim-->
+<!--Linha-->
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <div class="form-group">
+        <label>Diagnóstico Fisioterático</label>
+        <textarea class="form-control" [(ngModel)]="ficha.perg15" rows="3"></textarea>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="form-group">
+          <label>Objetivos do Tratamento</label>
+          <textarea class="form-control" [(ngModel)]="ficha.perg16" rows="3"></textarea>
+       </div>
+   </div>
+  </div>
+</div>
+<!--Fim-->
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <div class="form-group">
+        <label>Tratamento Fisioterápico</label>
+        <textarea class="form-control" [(ngModel)]="ficha.perg17" rows="3"></textarea>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="form-group">
+          <label>Conclusão</label>
+          <textarea class="form-control" [(ngModel)]="ficha.perg18" rows="3"></textarea>
+       </div>
+   </div>
+  </div>
+</div>
+<!--Fim-->
+<!--tabela-->
+<div class="container">
+<div class="row" >
+  <div class="col">
+          <div class="bg-light p-20">
+                  <div class="d-flex">
+                      <div class="align-self-center">
+                          <h3 class="m-b-0">Sessões</h3> Procedimento: <input class="form-control" style="text-transform: uppercase" [(ngModel)]="proced" type="text"></div>
+                      <div class="ml-auto align-self-center">
+                              <button (click)="incluirSessao()"class="btn btn-info waves-effect waves-light m-t-10" type="button">Incluir</button></div>
+                  </div>
+          </div>
+              
+  <div class="table-responsive"  > 
+              <table class="table table-hover earning-box">
+                  <thead>
+                      <tr>
+                          <th>Sessão</th>
+                          <th>Situação</th>
+                          <th>Procedimento</th>
+                          <th>Data</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr *ngFor="let pac of sessoes; let i = index">
+                          <td>{{pac.num}}</td>
+                          <td>{{pac.status}}</td>
+                          <td>{{pac.nome}}</td>
+                          <td>{{pac.dt_cad}}</td>                   
+                      </tr>                    
+                  </tbody>
+             </table>
+          </div>
+      </div>
+  </div>
+</div>
+<!--fim-->
+
+
+
+<div class="container">
+  <button (click)="salvarFicha()" class="btn btn-info waves-effect waves-light m-t-10">Salvar</button>
+</div>
+
+</div>
+</div>
+</div>
+</div>

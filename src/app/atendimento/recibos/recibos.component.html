@@ -1,0 +1,30 @@
+<br>
+              <div class="container">
+                <div [hidden]="controle" class="alert alert-info" role="alert">
+                    Recibos indisponíveis!
+                </div>
+             </div>
+              <div class="table-responsive"  [hidden]="!controle" > 
+                <table class="table table-hover earning-box">
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Forma de Pagamento</th>
+                            <th>Valor</th>   
+                            <th></th>                         
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let pac of recibos; let i = index">
+                            
+                            <td>{{pac.dt_cad}}</td>
+                            <td>{{pac.fpag}}</td>
+                            <td>{{pac.vl_pago}}</td>                            
+                            <td><button type="button" class="btn btn-outline-info"><i class="fa fa-print"></i></button></td>
+                                                
+                        </tr>                    
+                    </tbody>
+                </table>
+              </div>
+              
+              

@@ -1,0 +1,142 @@
+<div class="row">
+  <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+
+            <div class="row" >
+                <div class="col">
+                        <div class="bg-light p-20">
+                                <div class="d-flex">
+                                    <div class="align-self-center">
+                                        <h3 class="m-b-0">Estoque de Produtos</h3></div>
+                                        <div class="ml-auto align-self-center">
+                                            <button (click)="open(content2)" class="btn btn-info waves-effect waves-light m-t-10" type="button">Novo</button>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div [hidden]="controle" class="alert alert-info" role="alert">
+                                    Nenhum produto cadastrado!
+                                </div>
+                            </div>
+                <div class="table-responsive"  [hidden]="!controle" > 
+                    <table class="table table-hover earning-box">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Qtd</th>
+                                <th>Valor</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let pac of recibos; let i = index">
+                                
+                                <td>{{pac.nome}}</td>
+                                <td>{{pac.qtd}}</td>
+                                <td>{{pac.valor}}</td>
+                                <td><button type="button" (click)="open2(content,pac)" class="btn btn-outline-info"><i class="fa fa-check"></i></button></td>
+                                                     
+                            </tr>                    
+                        </tbody>
+                    </table>
+                </div>
+             </div>
+        </div>
+
+</div>    
+</div>
+</div>
+</div>
+
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header"> 
+    <h3 class="modal-title">Dados do Produto</h3>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    
+          <div class="container">
+                  <div class="row">                    
+                    <div class="col-sm">
+                      <div class="form-group">
+                              <label>Nome</label>
+                              <input [(ngModel)]="fat.nome" style="text-transform: uppercase" class="form-control">
+                      </div>
+                   </div>                                    
+                </div>
+           </div>  
+
+           <div class="container">
+              <div class="row">                    
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label>Qtd</label>
+                        <input [(ngModel)]="fat.qtd" type="number" class="form-control">
+                </div>
+               </div>
+               <div class="col-sm">              
+                  <div class="form-group">
+                      <label>Valor</label>
+                      <input [(ngModel)]="fat.valor" currencyMask class="form-control">
+                </div>
+               </div>                                    
+            </div>
+       </div>  
+
+           
+
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-info" (click)="c('Close click')">Cancelar</button>
+    <button type="button" class="btn btn-outline-info" (click)="alterar()">Salvar</button>
+  </div>
+</ng-template>
+
+<ng-template #content2 let-c="close" let-d="dismiss">
+    <div class="modal-header"> 
+      <h3 class="modal-title">Dados do Produto</h3>
+      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      
+            <div class="container">
+                    <div class="row">                    
+                      <div class="col-sm">
+                        <div class="form-group">
+                                <label>Nome</label>
+                                <input [(ngModel)]="fat2.nome" style="text-transform: uppercase"  class="form-control">
+                        </div>
+                     </div>                                    
+                  </div>
+             </div>  
+  
+             <div class="container">
+                <div class="row">                    
+                  <div class="col-sm">
+                      <div class="form-group">
+                          <label>Qtd</label>
+                          <input [(ngModel)]="fat2.qtd" type="number" class="form-control">
+                  </div>
+                 </div>
+                 <div class="col-sm">              
+                    <div class="form-group">
+                        <label>Valor</label>
+                        <input [(ngModel)]="fat2.valor" currencyMask class="form-control">
+                  </div>
+                 </div>                                    
+              </div>
+         </div>  
+  
+             
+  
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-info" (click)="c('Close click')">Cancelar</button>
+      <button type="button" class="btn btn-outline-info" (click)="salvar()">Salvar</button>
+    </div>
+  </ng-template>

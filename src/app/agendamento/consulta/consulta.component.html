@@ -1,0 +1,62 @@
+<div class="row">
+  <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+            
+          <div class="row">                    
+            <div class="col">
+                    <div class="col-lg-6">
+                    <label class="control-label m-t-20">Data do Atendimento</label>
+                    
+                        <div class="input-group mb-3">
+                            <input (keyup.enter)="buscarData()" type="date" [(ngModel)]="dataesc" class="form-control" aria-describedby="basic-addon1">
+                            <div class="input-group-append">
+                                <button (click)="buscarData()" class="btn btn-info" type="button">Definir</button>
+                            </div>
+                            
+                        </div>
+                   </div>
+            </div>
+          </div>
+
+          <div class="row" >
+            <div class="col">
+                    <div class="bg-light p-20">
+                            <div class="d-flex">
+                                <div class="align-self-center">
+                                    <h3 class="m-b-0">Fila de Espera</h3></div>
+                                <div class="ml-auto align-self-center">
+                                        </div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div [hidden]="controle" class="alert alert-info" role="alert">
+                                Nenhum Agendamento para a data escolhida!
+                            </div>
+                        </div>
+            <div class="table-responsive"  [hidden]="!controle" > 
+                <table class="table table-hover earning-box">
+                    <thead>
+                        <tr>
+                            <th>Paciente</th>
+                            <th>Hora</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let pac of listaAgen; let i = index">
+                            
+                            <td>{{pac.cliente}}</td>
+                            
+                            <td><button type="button" class="btn btn-outline-info">{{pac.hora}}</button></td>
+                                                 
+                        </tr>                    
+                    </tbody>
+                </table>
+            </div>
+         </div>
+    </div>
+        
+        </div>    
+      </div>
+  </div>
+</div>

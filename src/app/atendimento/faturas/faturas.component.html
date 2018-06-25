@@ -1,0 +1,79 @@
+<br>
+              <div class="container">
+                <div [hidden]="controle" class="alert alert-info" role="alert">
+                    Nenhuma fatura!
+                </div>
+             </div>
+              <div class="table-responsive"  [hidden]="!controle" > 
+                <table class="table table-hover earning-box">
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Origem</th>
+                            <th>Situação</th> 
+                            <th>Pago</th>
+                            <th>Pendente</th>                                                                
+                            <th></th>                         
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let pac of recibos; let i = index">
+                            
+                            <td>{{converterData(pac.dt_criada)}}</td>
+                            <td>{{pac.origem}}</td>
+                            <td>{{pac.status}}</td>  
+                            <td>R${{pac.vl_pago}}</td>   
+                            <td>R$ {{pac.vl_total}}</td>                                                                                  
+                                                                                 
+                            <td><button type="button" (click)="open2(content,pac)" class="btn btn-outline-info"><i class="fa fa-check"></i></button></td>
+                                                
+                        </tr>                    
+                    </tbody>
+                </table>
+              </div>
+              <ng-template #content let-c="close" let-d="dismiss">
+                <div class="modal-header"> 
+                  <h3 class="modal-title">Recebimento</h3>
+                  <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  
+                        <div class="container">
+                                <div class="row">
+                                  <div class="col-sm">
+                                    <div class="form-group">
+                                        <label>Forma de Pagamento</label>
+                                        <div class="form-check">
+                                            <input class="form-check-input" [(ngModel)]="fpag"  type="radio" name="6" id="6" value="Dinheiro" checked>
+                                            <label class="form-check-label" for="6">
+                                              Dinheiro
+                                            </label>
+                                          </div>
+                                          <div class="form-check">
+                                            <input class="form-check-input" [(ngModel)]="fpag" type="radio"  name="6" id="6a" value="Cartão">
+                                            <label class="form-check-label" for="6a">
+                                              Cartão
+                                            </label>
+                                          </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-sm">
+                                    <div class="form-group">
+                                            <label>Valor</label>
+                                            <input [(ngModel)]="valor" currencyMask class="form-control">
+                                    </div>
+                                 </div>
+                                </div>
+                              </div>
+
+                           
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-info" (click)="c('Close click')">Cancelar</button>
+                  <button type="button" class="btn btn-outline-info" (click)="pagar()">Salvar</button>
+                </div>
+              </ng-template>
+              
