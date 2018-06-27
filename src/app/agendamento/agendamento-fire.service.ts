@@ -13,7 +13,8 @@ export class AgendamentoFireService {
   }
 
   cancelarAgend(x:any){
-    this.fire.deleteChild('/AGENDAMENTO/'+x)
+    console.log(x)
+    this.fire.deleteChild('/AGENDAMENTO/'+x+'/')
   }
 
   

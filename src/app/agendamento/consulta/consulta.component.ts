@@ -44,7 +44,7 @@ export class ConsultaComponent implements OnInit {
  }
 
  cancelarAgendamento(x:any){
-    this.firea.cancelarAgend(x);
+    this.firea.cancelarAgend(x.key);
     this.buscarData();
     this.toastr.info('Pronto!');
  }
@@ -70,16 +70,17 @@ export class ConsultaComponent implements OnInit {
       agen.keycliente = this.pac.key;
       agen.status = '1';
       this.firea.salvarAgendamento(agen);
-      this.listaAgen.push(agen);
+      //this.listaAgen.push(agen);
       
       this.toastr.success('Salvo com sucesso!', 'Atenção!');
       this.selecionado = false;
       this.pac = new PacSeletor();
+      this.buscarData()
       
   }else{
      this.toastr.warning('Horário Indisponível!', 'Atenção!');
   }
-  console.log(this.ordenaLista());
+  //console.log(this.ordenaLista());
  }
 
  validaHoraEscolhida(){
