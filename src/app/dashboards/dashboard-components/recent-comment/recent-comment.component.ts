@@ -18,7 +18,7 @@ export class RecentcommentComponent{
 	  }
 
 	carregarAgend(){
-		this.fire.buscarAniversariantes().then(x=> {
+		/*this.fire.buscarAniversariantes().then(x=> {
 			var json = JSON.stringify(x.val());
 			var obj = JSON.parse(json);
 			
@@ -38,9 +38,16 @@ export class RecentcommentComponent{
 			}else{            
 			  this.controle = false;
 			}
-			
-			 
-		});
+						 
+		});*/
+		this.list = [];
+		this.list = this.fire.buscarAniversariantes();
+		if(this.list.length > 0){
+			this.controle = true;
+		}else{            
+			this.controle = false;
+		}
+
 	}
 
 }

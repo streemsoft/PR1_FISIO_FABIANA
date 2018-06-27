@@ -43,6 +43,12 @@ export class ConsultaComponent implements OnInit {
     this.selecionado = true;
  }
 
+ cancelarAgendamento(x:any){
+    this.firea.cancelarAgend(x);
+    this.buscarData();
+    this.toastr.info('Pronto!');
+ }
+
  cadastrarAgendamento():void{
 
   if(this.validaHoraEscolhida() && this.time != null){

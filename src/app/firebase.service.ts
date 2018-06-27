@@ -14,13 +14,22 @@ export class FirebaseService {
   rotaDestino:string = '1'; //rota de redirecionamento
   fichaKey:any = '_false'; //cliente em atendimento/completo os dados
   
-  config:any = {
+  /*config:any = {
     apiKey: "AIzaSyAQGo1aa4HER36_YuloS8TKv1-96_Sa_Rg",
     authDomain: "appsdfisio.firebaseapp.com",
     databaseURL: "https://appsdfisio.firebaseio.com",
     projectId: "appsdfisio",
     storageBucket: "",
     messagingSenderId: "986781619624"
+  };*/
+
+  config:any = {
+    apiKey: "AIzaSyBzQSo8S4ipmdhcPlar7YVsnCVVgt2T6R0",
+    authDomain: "estudo-8a066.firebaseapp.com",
+    databaseURL: "https://estudo-8a066.firebaseio.com",
+    projectId: "estudo-8a066",
+    storageBucket: "estudo-8a066.appspot.com",
+    messagingSenderId: "677705917496"
   };
 
   constructor( private router : Router) { 
@@ -46,8 +55,11 @@ export class FirebaseService {
     firebase.database().ref().update(updates);
   }
 
-  deleteChild( path:string, key:string ):void{
-    firebase.database().ref( this.firebaseKey + path + key).remove();
+  deleteChild( path:string ):void{
+    var updates = {};
+    updates[ this.firebaseKey + path] = null;
+    
+    firebase.database().ref().update(updates);
   }
 
   selectChild( path:string, key:string ){

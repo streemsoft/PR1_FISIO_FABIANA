@@ -12,6 +12,10 @@ export class AgendamentoFireService {
      return this.fire.selectChildEqual( '/AGENDAMENTO/','datae', dt );
   }
 
+  cancelarAgend(x:any){
+    this.fire.deleteChild('/AGENDAMENTO/'+x)
+  }
+
   
 salvarAgendamento(ag:Agendamento){
   var newKey = this.fire.getKey( '/AGENDAMENTO/' );

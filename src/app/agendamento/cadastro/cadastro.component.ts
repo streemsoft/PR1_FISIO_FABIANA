@@ -32,6 +32,12 @@ export class CadastroComponent implements OnInit {
     this.pac = this.firea.getPaciemteSelecionado();
   }
 
+  cancelarAgendamento(x:any){
+    this.firea.cancelarAgend(x);
+    this.buscarData();
+    this.toastr.info('Pronto!');
+ }
+
  cadastrarAgendamento():void{
 
   if(this.validaHoraEscolhida() && this.time != null){
