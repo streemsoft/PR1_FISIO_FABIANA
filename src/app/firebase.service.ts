@@ -14,17 +14,17 @@ export class FirebaseService {
   rotaDestino:string = '1'; //rota de redirecionamento
   fichaKey:any = '_false'; //cliente em atendimento/completo os dados
   
-  config:any = {
+  /*config:any = {
     apiKey: "AIzaSyAQGo1aa4HER36_YuloS8TKv1-96_Sa_Rg",
     authDomain: "appsdfisio.firebaseapp.com",
     databaseURL: "https://appsdfisio.firebaseio.com",
     projectId: "appsdfisio",
     storageBucket: "",
     messagingSenderId: "986781619624"
-  };
+  };*/
 
   //ambiente de teste
-  /*
+  
   config:any = {
     apiKey: "AIzaSyBzQSo8S4ipmdhcPlar7YVsnCVVgt2T6R0",
     authDomain: "estudo-8a066.firebaseapp.com",
@@ -32,7 +32,7 @@ export class FirebaseService {
     projectId: "estudo-8a066",
     storageBucket: "estudo-8a066.appspot.com",
     messagingSenderId: "677705917496"
-  };*/
+  };
 
   constructor( private router : Router) { 
      firebase.initializeApp(this.config);
