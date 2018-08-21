@@ -25,7 +25,7 @@ export class BuscaFinanceiroComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.atualizaDBlocal();
+    //this.atualizaDBlocal();
   }
 
   buscaLocal(){

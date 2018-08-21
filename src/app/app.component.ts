@@ -32,11 +32,11 @@ export class AppComponent {
       this.firebase.versaoDBlocal = '1';
     }
     
-    //carrega db local
+    /*carrega db local
     if('_true'==this.firebase.firebaseui){
       this.localDB.atualizaDB();
       this.localDB.getListItem();
-    }
+    }*/
   }
 
 }

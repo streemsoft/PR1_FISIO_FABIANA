@@ -25,7 +25,7 @@ export class BuscaComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.atualizaDBlocal();
+  //  this.atualizaDBlocal();
   }
 
   buscaLocal(){

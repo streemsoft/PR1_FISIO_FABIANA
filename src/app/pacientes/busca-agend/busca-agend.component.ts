@@ -25,7 +25,7 @@ export class BuscaAgendComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.atualizaDBlocal();
+  //  this.atualizaDBlocal();
   }
 
   buscaLocal(){

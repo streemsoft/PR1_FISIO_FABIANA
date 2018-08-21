@@ -7,9 +7,9 @@
                     <div class="col">
                             <label class="control-label m-t-20">Paciente</label>
                         <div class="input-group mb-3">
-                            <input (keyup.enter)="buscaLocal()" type="text" [(ngModel)]="searchString" class="form-control" placeholder="Qual nome do seu cliente?" aria-describedby="basic-addon1">
+                            <input (keyup.enter)="buscarPaciente()" type="text" [(ngModel)]="searchString" class="form-control" placeholder="Qual nome do seu cliente?" aria-describedby="basic-addon1">
                             <div class="input-group-append">
-                                <button (click)="buscaLocal()" class="btn btn-info" type="button">Buscar</button>
+                                <button (click)="buscarPaciente()" class="btn btn-info" type="button">Buscar</button>
                             </div>
                         </div>
                     </div>
